@@ -154,11 +154,12 @@ export class AppComponent implements OnInit {
 
     }
     if (data.hour) {
-      this.output[3].number = (data.hour.toString().slice(-1)) - 1
-      if (this.output[3].number === -1)
+      this.output[3].number = data.hour.toString().slice(-1)
+      if (this.output[3].number === 0)
         this.output[3].number = 9;
 
-      const hourData = this.database.find((item) => item.id === this.output[3].number)
+      const hourData = this.database.find((item) => item.id === parseInt(this.output[3].number))
+      
       this.output[3].element = hourData.element
       this.output[3].finger = hourData.finger
     }
