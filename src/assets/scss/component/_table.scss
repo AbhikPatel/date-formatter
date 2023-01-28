@@ -1,0 +1,17 @@
+table{
+    tbody{
+        td{
+            padding: 8px;
+            border-top: 1px solid #d1d1d1;
+            background-color: white;
+        }
+    }
+
+    thead {
+        th{
+            padding: 8px;
+            color: white;
+            background-color: $primary;
+        }
+    }
+}
